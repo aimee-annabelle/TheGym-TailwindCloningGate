@@ -489,6 +489,16 @@
         class="relative bg-[url('https://www.up.pt/portal/media/images/slide-universidade-junior-2024.format-jpeg.jpg')] w-full flex bg-cover h-[400px] lg:h-[600px]"
       >
         <div
+          class="absolute left-0 top-[50%] w-10 h-10 bg-[#A18A4D] text-white flex place-content-center items-center"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div
+          class="w-10 h-10 absolute right-0 top-[50%] bg-[#A18A4D] flex place-content-center text-white items-center"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div
           class="bg-zinc-800 absolute bottom-0 flex flex-col gap-3 lg:gap-5 lg:left-44 lg:bottom-20 p-2 lg:p-8 bg-opacity-85 h-1/3 lg:h-fit w-full lg:max-w-[480px] text-neutral-300"
         >
           <h3 class="text-lg lg:text-2xl font-bold">
@@ -527,11 +537,17 @@
           <div
             class="col-span-2 text-xl text-neutral-800 flex flex-col gap-5 py-2"
           >
-            <input
+            <select
               type="text"
-              placeholder="all"
               class="border-2 border-stone-900 w-full py-3 px-5"
-            />
+            >
+              <option value="">All</option>
+              <option value="">
+                Bachelor's and Integrated Master’s Degrees
+              </option>
+              <option value="">Master’s Degrees</option>
+              <option value="">Doctorates</option>
+            </select>
             <input
               type="text"
               placeholder="Please enter course keywords"
@@ -798,9 +814,46 @@
         <h1 class="text-6xl font-light text-[#A18A4D]">
           Frequently asked questions
         </h1>
-        <div></div>
+        <div
+          class="border-b w-full hidden lg:flex gap-10 text-lg font-semibold text-neutral-400"
+        >
+          <a href="" class="text-stone-900 border-b border-stone-900 pb-2"
+            >International Students</a
+          >
+          <a
+            href=""
+            class="hover:text-stone-900 hover:border-b hover:border-stone-900"
+            >Prospective Students</a
+          >
+          <a
+            href=""
+            class="hover:text-stone-900 hover:border-b hover:border-stone-900"
+            >Professionals</a
+          >
+          <a
+            href=""
+            class="hover:text-stone-900 hover:border-b hover:border-stone-900"
+            >Alumni</a
+          >
+          <a
+            href=""
+            class="hover:text-stone-900 hover:border-b hover:border-stone-900"
+            >U.Porto Students</a
+          >
+        </div>
+        <select
+          name=""
+          id=""
+          class="lg:hidden w-full border-2 text-[19px] py-3 px-5 border-stone-900"
+        >
+          <option value="">International Students</option>
+          <option value="">Prospective Students</option>
+          <option value="">Professionals</option>
+          <option value="">Alumni</option>
+          <option value="">U.Porto Students</option>
+        </select>
         <div class="w-full grid lg:grid-cols-2 gap-5">
-          <div class="flex flex-col gap-5">
+          <div class="order-2 lg:order-1 flex flex-col gap-5">
             <h3 class="text-2xl lg:text-3xl font-semibold">
               International Students
             </h3>
@@ -815,7 +868,7 @@
                 class="fa-solid fa-circle-chevron-right mt-1 self-center hover:translate-x-1"
               ></i>
             </a>
-            <div class="flex gap-1 text-white self-baseline mt-auto">
+            <div class="hidden lg:flex gap-1 text-white self-baseline mt-auto">
               <div
                 class="w-10 h-10 bg-neutral-400 flex place-content-center items-center"
               >
@@ -828,7 +881,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="order-1 lg:order-2">
             <img
               src="https://www.up.pt/portal/media/images/estudantes-internacionais-uporto-baixa_fbZkzHC.original.jpg"
               alt=""
